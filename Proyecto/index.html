@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuerdas y Acordes - Tienda Musical</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<div class="carrito-icono" id="carrito-btn">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="carrito-contador">0</span>
+</div>
+
+
+<div id="carrito-modal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar">&times;</span>
+    <h2>Tu Carrito de Compras</h2>
+    <div id="carrito-items"></div>
+    <div class="carrito-total">
+      <p>Total: <span id="carrito-total">$0.00</span></p>
+      <button id="vaciar-carrito" class="btn-carrito">Vaciar Carrito</button>
+      <button id="pagar" class="btn-carrito btn-primario">Pagar</button>
+    </div>
+  </div>
+</div>
+
+>
+<script src="carrito.js"></script>
+<body>
+    <div class="overlay">
+        <header>
+            <div class="container">
+                <h1>Cuerdas y Acordes</h1>
+                <p class="slogan">Donde la música cobra vida</p>
+            </div>
+        </header>
+
+        <main class="container">
+            
+            <section class="categoria">
+                <h2><i class="fas fa-keyboard"></i> Instrumentos Electrónicos</h2>
+                <div class="instrumentos">
+                    <div class="instrumento">
+                        <img src="imagenes/cajaritmos1.png" alt="Caja de ritmos profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Caja de Ritmos Profesional TR-909</h3>
+                            <p class="instrumento-precio">$1,299.99</p>
+                            <p class="instrumento-desc">Clásico de la música electrónica con sonidos analógicos</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/cajaritmos2.png" alt="Caja de ritmos moderna" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Caja de Ritmos Digital DR-880</h3>
+                            <p class="instrumento-precio">$899.99</p>
+                            <p class="instrumento-desc">Más de 1000 patrones rítmicos y efectos incorporados</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/bajoelectrico1.jpg" alt="Bajo eléctrico profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Bajo Eléctrico 4 cuerdas</h3>
+                            <p class="instrumento-precio">$1,199.99</p>
+                            <p class="instrumento-desc">Cuerpo de aliso, mástil de arce con diapasón de palisandro</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/bajoelectrico2.webp" alt="Bajo eléctrico 5 cuerdas" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Bajo Eléctrico 5 cuerdas</h3>
+                            <p class="instrumento-precio">$1,499.99</p>
+                            <p class="instrumento-desc">Rango extendido con cuerda Si grave adicional</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/theremin1.jpg" alt="Theremin profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Theremin Profesional Etherwave</h3>
+                            <p class="instrumento-precio">$899.99</p>
+                            <p class="instrumento-desc">Instrumento electrónico que se toca sin contacto físico</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/theremin2.jpg" alt="Theremin básico" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Theremin Básico</h3>
+                            <p class="instrumento-precio">$499.99</p>
+                            <p class="instrumento-desc">Perfecto para principiantes en instrumentos electrónicos</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/sintetizador1.jpg" alt="Sintetizador analógico" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Sintetizador Analógico Moog</h3>
+                            <p class="instrumento-precio">$2,499.99</p>
+                            <p class="instrumento-desc">Sonidos cálidos y orgánicos con filtros analógicos</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/sintetizador2.png" alt="Sintetizador digital" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Sintetizador Digital Workstation</h3>
+                            <p class="instrumento-precio">$1,799.99</p>
+                            <p class="instrumento-desc">Más de 1500 sonidos y secuenciador integrado</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Instrumentos de Percusión -->
+            <section class="categoria">
+                <h2><i class="fas fa-drum"></i> Instrumentos de Percusión</h2>
+                <div class="instrumentos">
+                    <div class="instrumento">
+                        <img src="imagenes/congas1.webp" alt="Congas profesionales" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Congas Profesionales LP</h3>
+                            <p class="instrumento-precio">$899.99</p>
+                            <p class="instrumento-desc">Pareja de congas con aros de acero y pieles premium</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/congas2.jpeg" alt="Congas para estudiantes" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Congas para Estudiantes</h3>
+                            <p class="instrumento-precio">$499.99</p>
+                            <p class="instrumento-desc">Ideal para principiantes, con afinadores mecánicos</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/pandereta1.jpg" alt="Pandereta profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Pandereta Profesional</h3>
+                            <p class="instrumento-precio">$89.99</p>
+                            <p class="instrumento-desc">Marco de madera con juegos de chapas dobles</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/pandereta2.webp" alt="Pandereta básica" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Pandereta Básica</h3>
+                            <p class="instrumento-precio">$39.99</p>
+                            <p class="instrumento-desc">Perfecta para educación musical</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/bateria1.jpg" alt="Batería acústica profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Batería Acústica Pro</h3>
+                            <p class="instrumento-precio">$2,800.00</p>
+                            <p class="instrumento-desc">Kit completo con cascos de arce y hardware profesional</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/bateria2.webp" alt="Batería electrónica" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Batería Electrónica Advanced</h3>
+                            <p class="instrumento-precio">$1,950.00</p>
+                            <p class="instrumento-desc">Pads sensibles al tacto con más de 300 sonidos</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/marimba1.avif" alt="Marimba profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Marimba Profesional 5 octavas</h3>
+                            <p class="instrumento-precio">$3,499.99</p>
+                            <p class="instrumento-desc">Madera de palisandro con resonadores de aluminio</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/marimba2.avif" alt="Marimba estudiantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Marimba Estudiantil</h3>
+                            <p class="instrumento-precio">$1,299.99</p>
+                            <p class="instrumento-desc">4 octavas, ideal para escuelas y conservatorios</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/xilofono1.jpg" alt="Xilófono profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Xilófono Orquestal</h3>
+                            <p class="instrumento-precio">$1,199.99</p>
+                            <p class="instrumento-desc">Sonido brillante con láminas de palisandro</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/xilofono2.jpg" alt="Xilófono infantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Xilófono Infantil</h3>
+                            <p class="instrumento-precio">$79.99</p>
+                            <p class="instrumento-desc">Colorido y resistente, ideal para niños</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/timbal1.jpg" alt="Timbal profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Timbal Sinfónico</h3>
+                            <p class="instrumento-precio">$1,899.99</p>
+                            <p class="instrumento-desc">Pedal de afinación rápida, membrana de piel</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/timbal2.webp" alt="Timbal básico" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Timbal Básico</h3>
+                            <p class="instrumento-precio">$499.99</p>
+                            <p class="instrumento-desc">Afinación manual, ideal para estudiantes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Instrumentos de Viento -->
+            <section class="categoria">
+                <h2><i class="fas fa-wind"></i> Instrumentos de Viento</h2>
+                <div class="instrumentos">
+                    <div class="instrumento">
+                        <img src="imagenes/trombon1.webp" alt="Trombón profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Trombón Tenor Profesional</h3>
+                            <p class="instrumento-precio">$1,899.99</p>
+                            <p class="instrumento-desc">Campana de latón amarillo, vara de acción suave</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/trombon2.jpg" alt="Trombón estudiantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Trombón para Estudiantes</h3>
+                            <p class="instrumento-precio">$899.99</p>
+                            <p class="instrumento-desc">Ideal para principiantes, incluye estuche y boquilla</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/trompeta1.jpg" alt="Trompeta profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Trompeta Profesional Bb</h3>
+                            <p class="instrumento-precio">$1,499.99</p>
+                            <p class="instrumento-desc">Pistones monel, acabado lacado, sonido brillante</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/trompeta2.webp" alt="Trompeta estudiantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Trompeta para Principiantes</h3>
+                            <p class="instrumento-precio">$599.99</p>
+                            <p class="instrumento-desc">Diseño ergonómico, válvulas suaves</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/saxofon1.webp" alt="Saxofón alto profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Saxofón Alto Profesional</h3>
+                            <p class="instrumento-precio">$2,299.99</p>
+                            <p class="instrumento-desc">Cuerpo de latón dorado, mecanismo preciso</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/saxofon2.jpg" alt="Saxofón tenor estudiantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Saxofón Tenor Estudiantil</h3>
+                            <p class="instrumento-precio">$1,599.99</p>
+                            <p class="instrumento-desc">Ideal para estudiantes avanzados</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/fagot1.webp" alt="Fagot profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Fagot Profesional</h3>
+                            <p class="instrumento-precio">$8,999.99</p>
+                            <p class="instrumento-desc">Madera de arce, llaves de plata, sonido cálido</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/fagot2.jpg" alt="Fagot estudiantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Fagot Estudiantil</h3>
+                            <p class="instrumento-precio">$4,999.99</p>
+                            <p class="instrumento-desc">Modelo reducido para estudiantes avanzados</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/oboe1.jpg" alt="Oboe profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Oboe Profesional</h3>
+                            <p class="instrumento-precio">$5,499.99</p>
+                            <p class="instrumento-desc">Madera de granadilla, sistema conservatorio</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/oboe2.webp" alt="Oboe estudiantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Oboe para Estudiantes</h3>
+                            <p class="instrumento-precio">$2,999.99</p>
+                            <p class="instrumento-desc">Resina con llaves niqueladas, ideal para principiantes</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/clarinete1.webp" alt="Clarinete profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Clarinete en Sib Profesional</h3>
+                            <p class="instrumento-precio">$2,199.99</p>
+                            <p class="instrumento-desc">Madera de granadilla, llaves niqueladas</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/clarinete2.jpg" alt="Clarinete estudiantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Clarinete para Principiantes</h3>
+                            <p class="instrumento-precio">$499.99</p>
+                            <p class="instrumento-desc">Resina con estuche y accesorios incluidos</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/flauta1.avif" alt="Flauta traversa profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Flauta Traversa Profesional</h3>
+                            <p class="instrumento-precio">$2,899.99</p>
+                            <p class="instrumento-desc">Plata esterlina, mecanismo de llaves preciso</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/flauta2.webp" alt="Flauta traversa estudiantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Flauta Traversa Estudiantil</h3>
+                            <p class="instrumento-precio">$799.99</p>
+                            <p class="instrumento-desc">Cabeza de plata, cuerpo niquelado</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Instrumentos de Cuerda -->
+            <section class="categoria">
+                <h2><i class="fas fa-guitar"></i> Instrumentos de Cuerda</h2>
+                <div class="instrumentos">
+                    <div class="instrumento">
+                        <img src="imagenes/mandolina1.jpg" alt="Mandolina profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Mandolina Profesional</h3>
+                            <p class="instrumento-precio">$899.99</p>
+                            <p class="instrumento-desc">Estilo A con tapa de abeto y fondo de arce</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/mandolina2.jpg" alt="Mandolina estilo F" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Mandolina Estilo F</h3>
+                            <p class="instrumento-precio">$1,199.99</p>
+                            <p class="instrumento-desc">Volutas talladas, acabado brillante</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/mandolina3.jpg" alt="Mandolina para principiantes" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Mandolina para Principiantes</h3>
+                            <p class="instrumento-precio">$249.99</p>
+                            <p class="instrumento-desc">Estuche y afinador incluidos</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/banjo1.avif" alt="Banjo 5 cuerdas profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Banjo 5 Cuerdas Profesional</h3>
+                            <p class="instrumento-precio">$1,499.99</p>
+                            <p class="instrumento-desc">Resonador, aro de tono de 11", sonido brillante</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/banjo2.webp" alt="Banjo 4 cuerdas" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Banjo 4 Cuerdas Tenor</h3>
+                            <p class="instrumento-precio">$999.99</p>
+                            <p class="instrumento-desc">Ideal para jazz y música tradicional</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/banjo3.webp" alt="Banjo para principiantes" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Banjo para Principiantes</h3>
+                            <p class="instrumento-precio">$399.99</p>
+                            <p class="instrumento-desc">5 cuerdas con guía de aprendizaje</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/ukelele1.jpg" alt="Ukelele concierto profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Ukelele Concert Profesional</h3>
+                            <p class="instrumento-precio">$299.99</p>
+                            <p class="instrumento-desc">Madera de koa hawaiana, sonido cálido</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/ukelele2.jpg" alt="Ukelele soprano" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Ukelele Soprano</h3>
+                            <p class="instrumento-precio">$129.99</p>
+                            <p class="instrumento-desc">Tamaño tradicional, cuerdas de nylon</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/guitarra1.webp" alt="Guitarra acústica profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Guitarra Acústica Premium</h3>
+                            <p class="instrumento-precio">$1,299.99</p>
+                            <p class="instrumento-desc">Tapa de abeto sólido, aros de palisandro</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/guitarra2.jpg" alt="Guitarra acústica estudiantil" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Guitarra Acústica Estudiantil</h3>
+                            <p class="instrumento-precio">$299.99</p>
+                            <p class="instrumento-desc">Cuerdas suaves, cuerpo delgado</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/guitarra3.webp" alt="Guitarra eléctrica profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Guitarra Eléctrica Profesional</h3>
+                            <p class="instrumento-precio">$1,899.99</p>
+                            <p class="instrumento-desc">Pastillas humbucker, mástil de arce</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/piano1.webp" alt="Piano de cola profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Piano de Cola Profesional</h3>
+                            <p class="instrumento-precio">$25,999.99</p>
+                            <p class="instrumento-desc">7 pies, acción de martillos premium</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/piano2.jpg" alt="Piano vertical profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Piano Vertical Profesional</h3>
+                            <p class="instrumento-precio">$8,999.99</p>
+                            <p class="instrumento-desc">48", mecanismo silenciador incorporado</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/piano3.png" alt="Piano digital avanzado" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Piano Digital Avanzado</h3>
+                            <p class="instrumento-precio">$2,499.99</p>
+                            <p class="instrumento-desc">Teclado ponderado, 256 voces de polifonía</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/arpa1.jpg" alt="Arpa de concierto" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Arpa de Concierto</h3>
+                            <p class="instrumento-precio">$12,999.99</p>
+                            <p class="instrumento-desc">47 cuerdas, pedales de doble acción</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/arpa2.jpg" alt="Arpa celta" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Arpa Celta</h3>
+                            <p class="instrumento-precio">$3,999.99</p>
+                            <p class="instrumento-desc">34 cuerdas con palancas</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/arpa3.jpg" alt="Arpa para principiantes" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Arpa para Principiantes</h3>
+                            <p class="instrumento-precio">$1,299.99</p>
+                            <p class="instrumento-desc">22 cuerdas, perfecta para iniciarse</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/contrabajo.jpg" alt="Contrabajo acústico" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Contrabajo Acústico</h3>
+                            <p class="instrumento-precio">$4,999.99</p>
+                            <p class="instrumento-desc">Arco y funda térmica incluidos</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/violin1.jpeg" alt="Violín profesional" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Violín Profesional 4/4</h3>
+                            <p class="instrumento-precio">$2,999.99</p>
+                            <p class="instrumento-desc">Madera envejecida, arco de pernambuco</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/violin2.webp" alt="Violín intermedio" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Violín Intermedio 4/4</h3>
+                            <p class="instrumento-precio">$899.99</p>
+                            <p class="instrumento-desc">Tapa de abeto, fondo de arce</p>
+                        </div>
+                    </div>
+
+                    <div class="instrumento">
+                        <img src="imagenes/violin3.jpg" alt="Violín para principiantes" class="instrumento-img">
+                        <div class="instrumento-info">
+                            <h3 class="instrumento-nombre">Violín para Principiantes 4/4</h3>
+                            <p class="instrumento-precio">$399.99</p>
+                            <p class="instrumento-desc">Estuche, arco y resina incluidos</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+       <footer>
+    <div class="footer-contenedor">
+        <div class="container">
+            <div class="redes-sociales">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-x"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="derechos">© 2025 Cuerdas y Acordes. Todos los derechos reservados.</p>
+            <p class="derechos">Dirección: Calle Musical 123, Ciudad Armonía | Teléfono: (555) 123-4567</p>
+            <p class="derechos">Horario: Lunes a Viernes 10:00 - 20:00 | Sábados 10:00 - 18:00</p>
+        </div>
+    </div>
+</footer>
+    </div>
+</body>
+</html>
